@@ -20,7 +20,7 @@ if __name__=='__main__':
         d_valid=f.readlines()# 验证数据集
     with open('../data/test.tsv','r',encoding="utf_8") as f:
         d_test=f.readlines()# 测试数据集
-    data=readData(d_train[:5000] ,d_valid[:1000], d_test[:1000])
+    data=readData(d_train ,d_valid, d_test)
     train_features,train_label,valid_features,valid_label,test_features,test_label=data
     print("--------------------------------------")
     mymodel=model(train_features,train_label,modelname="SVM")
